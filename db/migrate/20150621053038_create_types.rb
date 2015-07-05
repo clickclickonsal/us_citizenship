@@ -2,6 +2,7 @@ class CreateTypes < ActiveRecord::Migration
   def change
     create_table :types do |t|
       t.string :name
+      t.string :spanish_name
 
       t.timestamps null: false
     end

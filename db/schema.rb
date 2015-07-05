@@ -18,18 +18,21 @@ ActiveRecord::Schema.define(version: 20150621230836) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "spanish_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "questions", force: :cascade do |t|
     t.string   "question_text"
+    t.string   "spanish_question_text"
     t.integer  "type_id"
     t.integer  "category_id"
     t.integer  "question_number"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "answers",                      array: true
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "answers",                            array: true
+    t.string   "spanish_answers",                    array: true
   end
 
   add_index "questions", ["category_id"], name: "index_questions_on_category_id", using: :btree
@@ -37,8 +40,9 @@ ActiveRecord::Schema.define(version: 20150621230836) do
 
   create_table "types", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "spanish_name"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_foreign_key "questions", "categories"
