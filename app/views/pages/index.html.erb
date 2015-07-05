@@ -2,3 +2,9 @@
   <h1>US Citzenship</h1>
   <%= image_tag("Seal_of_the_US_Department_of_Homeland_Security.png", :class => "logo") %>
 </div>
+
+<ul>
+  <% @questions.each do |question| %>
+    <li><%= question.question_text %></li>
+  <% end %>
+</ul>
