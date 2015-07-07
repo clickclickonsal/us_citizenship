@@ -68,5 +68,15 @@ Question.create([
     answers: ["the Bill of Rights"],
     spanish_answers: ["la Carta de Derechos"]
   },
+  { 
+    question_text: "", 
+    spanish_question_text: "",
+    type_id: types.first.id, 
+    category_id: cats.first.id, 
+    question_number: 6,
+    answers: [""],
+    spanish_answers: [""]
+  },
+  
 
 ])
