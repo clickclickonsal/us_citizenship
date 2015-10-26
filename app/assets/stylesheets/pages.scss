@@ -9,4 +9,38 @@ h1 {
 
 .logo {
   width: 7.5em;
+  margin-bottom: 1em;
+}
+
+.paginate-btns {
+  color: white;
+
+  a {
+    color: black;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .logo {
+    width: 6.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .logo {
+    width: 5.5em;
+  }
+  .content-container {
+    font-size: 0.9em;
+    padding: 0;
+    ul {
+      padding-left: 1.6em;
+    }
+  }
 }
