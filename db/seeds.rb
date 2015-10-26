@@ -111,7 +111,7 @@ Question.create([
     answers: ["the Bill of Rights"],
     spanish_answers: ["la Carta de Derechos"]
   },
-  { 
+  {
     question_text: "What is one right or freedom from the First Amendment?", 
     spanish_question_text: "¿Cuál es un derecho o libertad que la Primera Enmienda garantiza?",
     type_id: types.first.id, 
@@ -984,6 +984,5 @@ Question.create([
     question_number: 100,
     answers: ["New Year’s Day", "Martin Luther King, Jr. Day", "Presidents’ Day", "Memorial Day", "Independence Day", "Labor Day", "Columbus Day", "Veterans Day", "Thanksgiving", "Christmas"],
     spanish_answers: ["el Día de Año Nuevo", "el Día de Martin Luther King, Jr.", "el Día de los Presidentes", "el Día de la Recordación", "el Día de la Independencia", "el Día del Trabajo", "el Día de la Raza (Cristóbal Colón)", "el Día de los Veteranos", "el Día de Acción de Gracias", "el Día de Navidad"]
-  },
-
+  }
 ])
