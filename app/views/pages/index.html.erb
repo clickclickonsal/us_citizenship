@@ -3,8 +3,17 @@
   <%= image_tag("Seal_of_the_US_Department_of_Homeland_Security.png", :class => "logo") %>
 </div>
 
-<ul>
-  <% @questions.each do |question| %>
-    <li><%= question.question_text %></li>
-  <% end %>
-</ul>
+<div class="row">
+  <ul>
+    <% @questions.each_with_index do |question, index| %>
+      <li class="question"><%= index + 1 %>: <span class="english-question"><%= question.question_text %></span><span class="spanish-question hide"><%= question.spanish_question_text %></span></li>
+      <ul class="answers">
+        <% for i in 0..(question.answers.length - 1) %>
+          <li><span class="english-answer"><%= question.answers[i] %></span><span class="spanish-answer hide"><%= question.spanish_answers[i] %></span></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </ul>
+</div>
+
+<button class="translate-btn">Translate</button>
