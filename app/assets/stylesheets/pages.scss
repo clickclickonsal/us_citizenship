@@ -2,51 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  font-size: 3.5em;
-  font-weight: bold;
+html, body, .wrapper {
+  padding: 0;
+  margin: 0;
 }
 
-.logo {
-  width: 7.5em;
-  margin-bottom: 3em;
-}
+.wrapper {
+  height: 100vh;
+  position: relative;
 
-.content-container {
-  font-size: 1.5em;
-
-  .question-number {
-    float: left;
-    font-size: 2em;
-    width: 10%;
+  h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
   }
 
-  .text-container {
-    float: left;
-    width: 90%;
-    .question-text {
-      font-size: 1.8em;
+  .logo {
+    width: 7.5em;
+    margin-bottom: 3em;
+  }
+
+  .content-container {
+    font-size: 1.5em;
+    height: 80vh;
+    overflow: scroll;
+
+    .question-number {
+      float: left;
+      font-size: 2em;
+      width: 12%;
     }
 
-    .answer-text {
+    .text-container {
+      float: left;
+      width: 88%;
+      .question-text {
+        font-size: 1.8em;
+      }
+
+      .answer-text {
+        font-size: 1.8em;
+      } 
+    }
+  }
+
+  .buttons-container {
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+    .translate-btn {
+      font-size: 3em;
+    }
+    .paginate-btns {
+      color: white;
       font-size: 1.8em;
-    } 
-  }
-}
 
-.buttons-container {
-  position: absolute;
-  bottom: 0;
-  left: 0; right: 0;
-  .translate-btn {
-    font-size: 3em;
-  }
-  .paginate-btns {
-    color: white;
-    font-size: 1.8em;
-
-    a {
-      color: black;
+      a {
+        color: black;
+      }
     }
   }
 }
