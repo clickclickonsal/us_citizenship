@@ -1,0 +1,26 @@
+{
+  "name": "us_citizenship",
+  "version": "1.0.0",
+  "description": "A US Citizenship Study Guide App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clickclickonsal/us_citizenship.git"
+  },
+  "author": "clickclickonsal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clickclickonsal/us_citizenship/issues"
+  },
+  "homepage": "https://github.com/clickclickonsal/us_citizenship",
+  "dependencies": {
+    "browserify": "^12.0.0",
+    "browserify-incremental": "^3.0.1",
+    "react": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.4"
+  }
+}
