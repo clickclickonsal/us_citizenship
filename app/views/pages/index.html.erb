@@ -8,7 +8,7 @@
     <% @questions.each do |question| %>
 
       <!-- English Version -->
-      <ul class="list-unstyled" id="english-version">
+      <ul class="list-unstyled <%= 'hide' if @language == 'spanish' %>" id="english-version">
         <li class="text-center">
         <audio controls>
           <source src="http://www.uscis.gov/sites/default/files/files/nativedocuments/Track%20<%= sprintf '%02d', question.question_number %>.mp3" type="audio/mpeg">
@@ -25,7 +25,7 @@
       </ul>
 
       <!-- Spanish Version -->
-      <ul class="list-unstyled hide" id="spanish-version">
+      <ul class="list-unstyled <%= 'hide' if @language != 'spanish' %>" id="spanish-version">
         <li class="text-center"><audio controls><source src="http://www.uscis.gov/sites/default/files/USCIS/Office%20of%20Citizenship/Naturalization%20Test/Redesigned%20Natz%20Test/100%20Test%20Q&A%20Audio%20Files/Spanish%20audio/MP3s%20-%20Spanish/Question_<%= sprintf '%02d', question.question_number %>_Spanish.mp3" type="audio/mpeg"></audio></li>
         <li class="question-number"><%= question.question_number %>:</li>
         <li class="text-container">
@@ -42,8 +42,8 @@
 
   <!-- Buttons -->
   <div class="col-lg-12 text-center buttons-container">
-    <input class="translate-btn" type="checkbox" checked data-toggle="toggle" data-on="English" data-off="Spanish">
-    <%= will_paginate @questions, :class => "paginate-btns" %>
+    <input class="translate-btn" type="checkbox" <%= 'checked' if @language != 'spanish' %> data-toggle="toggle" data-on="English" data-off="Espanol">
+    <%= will_paginate @questions, :class => "paginate-btns", :params => { :lang => params[:lang]} %>
   </div>
 </div>
 

@@ -1,40 +1,29 @@
 $(document).ready(function() {
-  $('.question').on('click', function() {
-    // $(this).
-  });
+  $('.translate-btn').on('change', function (e) {
+    var paramsFromURL = window.location.search.replace(/\?/g, '').split('&');
+    var lang = false;
+    var page = false;
+    var newUrl;
 
-  $('.translate-btn').on('change', function () {
+    for (var i = 0; i < paramsFromURL.length; i++) {
+      var paramKey = paramsFromURL[i].slice(0, 4);
+      var paramVal = paramsFromURL[i].slice(5);
+
+      if (paramKey === 'lang') {
+        lang = paramVal;
+      } else if (paramKey === 'page') {
+        page = paramVal;
+      }
+    }
+    if (e.target.checked) {
+      newUrl = page ? '/?lang=english&page=' + page : '/?lang=english'; 
+      window.location.href = newUrl;
+    } else {
+      newUrl = page ? '/?lang=spanish&page=' + page : '/?lang=spanish'; 
+      window.location.href = newUrl;
+    }
+
     $('#english-version').toggleClass('hide');
     $('#spanish-version').toggleClass('hide');
-  });
-
-  var isPlaying = false;
-
-  $('#play-en').on('click', function (e) {
-    e.preventDefault();
-
-    if (isPlaying) {
-      document.getElementById('en-audio').pause();
-      $('#en-audio').removeClass('active');
-      isPlaying = false;
-    } else {
-      document.getElementById('en-audio').play();
-      $('#en-audio').addClass('active');
-      isPlaying = true;
-    }
-  });
-
-  $('#play-sp').on('click', function (e) {
-    e.preventDefault();
-
-    if (isPlaying) {
-      document.getElementById('sp-audio').pause();
-      $('#sp-audio').removeClass('active');
-      isPlaying = false;
-    } else {
-      document.getElementById('sp-audio').play();
-      $('#sp-audio').addClass('active');
-      isPlaying = true;
-    }
   });
 });
