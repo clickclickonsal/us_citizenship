@@ -73,7 +73,9 @@ Question.create([
     category_id: cats.first.id, 
     question_number: 1,
     answers: ["the Constitution"],
-    spanish_answers: ["la Constitución"]
+    spanish_answers: ["la Constitución"],
+    english_audio: "http://www.uscis.gov/sites/default/files/files/nativedocuments/Track%2001.mp3",
+    spanish_audio: "http://www.uscis.gov/sites/default/files/USCIS/Office%20of%20Citizenship/Naturalization%20Test/Redesigned%20Natz%20Test/100%20Test%20Q&A%20Audio%20Files/Spanish%20audio/MP3s%20-%20Spanish/Question_01_Spanish.mp3"
   },
   { 
     question_text: "What does the Constitution do?", 
