@@ -12,4 +12,4 @@ A US Citizenship Study App
 * ```rails server```
 
 ---
-Written By: ![Sal Hernandez](https://twitter.com/clickclickonsal)
+Written By: [Sal Hernandez](https://twitter.com/clickclickonsal)
